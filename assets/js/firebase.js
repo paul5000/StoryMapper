@@ -1,13 +1,13 @@
 // Initialize Firebase
 firebase.initializeApp({
-    apiKey: "AIzaSyA8atTXmFZIh52DS_2qJKiwf0jNCkQ75jQ",
-    authDomain: "storycatcher-899bb.firebaseapp.com",
-    databaseURL: "https://storycatcher-899bb.firebaseio.com",
-    projectId: "storycatcher-899bb",
-    storageBucket: "storycatcher-899bb.appspot.com",
-    messagingSenderId: "858403123719",
-    appId: "1:858403123719:web:f861e1162223d0fb3f30a2",
-    measurementId: "G-QS1L38GWGR",
+  apiKey: "AIzaSyBxlBVs8pTzztz9bIEdfEwa2xuguSvDPXA",
+  authDomain: "storycatcher-c2021.firebaseapp.com",
+  databaseURL: "https://storycatcher-c2021.firebaseio.com",
+  projectId: "storycatcher-c2021",
+  storageBucket: "storycatcher-c2021.appspot.com",
+  messagingSenderId: "139292647133",
+  appId: "1:139292647133:web:033d6d3b986466e163c534",
+  measurementId: "G-P0LNTLR72F"
 });
 
 async function startCapture() {
