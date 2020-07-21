@@ -1,26 +1,180 @@
-<html lang=”en”>
+<!DOCTYPE html>
+
+<html>
+
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Name of your awesome camera app -->
-    <title>Camera App</title>
-    <!-- Link to your main style sheet-->
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>StoryCapture [Beta]</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
+
 <body>
-    <!-- Camera -->
-    <main id="camera">
-        <!-- Camera sensor -->
-        <canvas id="camera--sensor"></canvas>
-        <!-- Camera view -->
-        <video id="camera--view" autoplay playsinline></video>
-        <!-- Camera output -->
-        <img src="//:0" alt="" id="camera--output">
-        <!-- Camera trigger -->
-        <button id="camera--trigger">Take a picture</button>
+
+  <div class="screen" id="screen1">
+    <header>
+      <h1>Take a picture through the frame</h1>
+      <span>to start a story and share your ideas.</span>
+    </header>
+    <main>
+      <div id="camera">
+        <canvas id="camera--sensor" style="display: none;"></canvas>
+        <video id="camera--view" class="camera--frame" autoplay playsinline></video>
+      </div>
     </main>
-    <!-- Reference to your JavaScript file -->
-    <script src="app.js"></script>
+    <footer>
+      <button type="button" id="camera--trigger">Take a picture</button>
+    </footer>
+  </div>
+
+  <div class="screen" id="screen2">
+    <header>
+      <h1>Drag the Stickers</h1>
+      <span>to enrich your story.</span>
+    </header>
+    <main>
+      <div class="camera--frame">
+        <img id="camera--output" src="//:0" alt="your picture" width="100%" /> <!-- https://dummyimage.com/640x480/333/eee.png&text=test-image -->
+        <div class="dropzone"></div>
+      </div>
+      
+      <div class="scrollable--x">
+        <div class="stickers">
+          <img src="./assets/img/1.png" height="50px" class="draggable" />
+          <img src="./assets/img/2.png" height="50px" class="draggable" />
+          <img src="./assets/img/3.png" height="50px" class="draggable" />
+          <img src="./assets/img/4.png" height="50px" class="draggable" />
+          <img src="./assets/img/5.png" height="50px" class="draggable" />
+          <img src="./assets/img/6.png" height="50px" class="draggable" />
+          <img src="./assets/img/7.png" height="50px" class="draggable" />
+          <img src="./assets/img/8.png" height="50px" class="draggable" />
+          <img src="./assets/img/9.png" height="50px" class="draggable" />
+          <img src="./assets/img/10.png" height="50px" class="draggable" />
+        </div>
+      </div>
+
+      <div class="text--input">
+        <textarea maxlength="280" rows="3" placeholder="Share with us what you think..."></textarea>
+      </div>
+    </main>
+
+    <footer>
+      <button type="button" onclick="showScreen('#screen1')">Re-take a picture</button>
+      <button type="button" onclick="report()">Submit</button>
+    </footer>
+  </div>
+
+  <div class="screen" id="screen3">
+    <div class="container-fluid camera--edit">
+      <!-- Camera output -->
+      <img src="//:0" alt="" id="camera--output" />
+    </div>
+
+    <div class="container-fluid stickers">
+      <div class="container testimonial-group">
+        <div class="row text-center">
+          <div class="col-xs-4">1</div>
+          <!--
+		   -->
+          <div class="col-xs-4">2</div>
+          <!--
+		   -->
+          <div class="col-xs-4">3</div>
+          <!--
+		   -->
+          <div class="col-xs-4">4</div>
+          <!--
+		   -->
+          <div class="col-xs-4">5</div>
+          <!--
+		   -->
+          <div class="col-xs-4">6</div>
+          <!--
+		   -->
+          <div class="col-xs-4">7</div>
+          <!--
+		   -->
+          <div class="col-xs-4">8</div>
+          <!--
+		   -->
+          <div class="col-xs-4">9</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid text--input">
+      <div class="row">
+        <form>
+          <div class="form-group">
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+              placeholder="Please share your thoughts here..."></textarea>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="container-fluid nav--1">
+      <div class="row">
+        <div class="col">
+          <button type="button" class="btn btn-dark" onclick="showScreen1()">
+            Re-take a picture
+          </button>
+        </div>
+        <div class="col">
+          <button type="button" class="btn btn-dark" onclick="showScreenStickers()">
+            Stickers
+          </button>
+        </div>
+        <div class="col">
+          <button type="button" class="btn btn-dark" onclick="showScreenText()">
+            Text
+          </button>
+        </div>
+        <div class="col">
+          <button type="button" class="btn btn-dark" onclick="showScreen1()">
+            Submit
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="screen" id="screen4">
+    <div class="container-fluid camera--taken">
+      <!-- HTML for Screen 4 -->
+      <h1>Screen 4</h1>
+    </div>
+
+    <div class="container-fluid nav--1">
+      <div class="row">
+        <div class="col">
+          <button type="button" class="btn btn-dark" onclick="showScreen1()">
+            Re-take a picture
+          </button>
+        </div>
+        <div class="col">
+          <button type="button" class="btn btn-dark" onclick="showScreen1()">
+            Submit
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.firebase.com/js/client/2.2.1/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-storage.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/interact.js/1.2.8/interact.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+
+  <script src="./assets/js/firebase.js"></script>
+  <script src="./assets/js/webcam.js"></script>
+  <script src="./assets/js/dragdrop.js"></script>
+  <script src="./assets/js/script.js"></script>
 </body>
+
 </html>
