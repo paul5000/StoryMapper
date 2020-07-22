@@ -61,6 +61,7 @@ textarea { width: 100%; }
   position: relative;
   width: 100%;
   height: auto;
+  max-width: 640px;
 }
 
 /*
@@ -70,27 +71,27 @@ textarea { width: 100%; }
 .screen {
   display: none;
   position: absolute;
-  width: 100vw;
-  min-height: 100vh;
+  width: 100%;
+  min-height: 100%;
   text-align: center;
   background-color: #fefefe;
 }
 
 .screen > * {
-  width: 100%;
   margin-top: 1rem;
   padding: 0 1rem;
 }
 
+.screen > main,
 .screen--active {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
+  align-items: center;
 }
 
 .screen > header {
   text-align: center;
-  padding: 0 10vw;
   text-shadow: 0 0.05rem 0.1rem var(--var-box-shadow-color);
 }
 
@@ -117,9 +118,13 @@ textarea { width: 100%; }
 
 .scrollable--x {
   overflow-x: scroll;
+  max-width: 90vw;
 }
 
-.text--input { padding-top: 1rem; }
+.text--input {  
+  width: 100%;
+  padding-top: 1rem;
+}
 
 .dropzone,
 .draggable,
@@ -138,4 +143,10 @@ textarea { width: 100%; }
 .dropzone > * {
   position: absolute;
   left: 0; top: 0;
+}
+
+.text--help {
+  font-size: 0.8rem;
+  opacity: 0.6;
+  text-transform: uppercase;
 }

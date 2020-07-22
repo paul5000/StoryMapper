@@ -39,7 +39,9 @@
         <img id="camera--picture" src="//:0" alt="your picture" />
         <div class="dropzone"></div>
       </div>
-      
+      <p class="text--help">
+        Swipe right to choose and up to place.
+      </p>
       <div class="scrollable--x">
         <div class="sticker__list">
           <!-- img.draggable[src="./assets/img/sticker/$.svg" alt="sticker-$" height="64px"]*35 -->
@@ -89,6 +91,16 @@
     <footer>
       <button type="button" onclick="showScreen('#screen-1')">Re-take a picture</button>
       <button type="button" class="button--primary" onclick="report()">Submit</button>
+    </footer>
+  </div>
+
+  <div id="screen-3" class="screen">
+    <header>
+      <h1>Thanks for participating</h1>
+      <span>your submission has been made.</span>
+    </header>
+    <footer>
+      <button type="button" class="button--primary" onclick="showScreen('#screen-1')">Do it again</button>
     </footer>
   </div>
 
