@@ -69,6 +69,13 @@
     var draggableElements = null
     var dropzones = null
 
+    var currentX = 0,
+        currentY = 0,
+        initialX = 0,
+        initialY = 0,
+        offsetX = 0,
+        offsetY = 0
+
     initDragDrop = () => {
         draggableElements = Array.from( document.querySelectorAll('.draggable') )
         dropzones = Array.from( document.querySelectorAll('.dropzone') )
@@ -77,18 +84,29 @@
 
     _addEventListener = () => {
         draggableElements.forEach((element) => {
-            element.addEventListener('dragstart', _dragStartHandler, false)
-            element.addEventListener('dragend', _dragEndHandler, false)
+            element.addEventListener('dragstart',   _dragStartHandler, false)
+            element.addEventListener('dragend',     _dragEndHandler, false)
+            element.addEventListener('drag',        _dragHandler, false)
         })
         dropzones.forEach((element) => {
-            element.addEventListener('dragenter', _dragEnterHandler, false)
-            element.addEventListener('dragleave', _dragLeaveHandler, false)
-            element.addEventListener('dragover', _dragOverHandler, false)
-            element.addEventListener('drop', _dropHandler, false)
+            element.addEventListener('dragenter',   _dragEnterHandler, false)
+            element.addEventListener('dragleave',   _dragLeaveHandler, false)
+            element.addEventListener('dragover',    _dragOverHandler, false)
+            element.addEventListener('drop',        _dropHandler, false)
         })
     }
 
+    // draggable events
+
     _dragStartHandler = (event) => {
+        if (event.type === "touchstart") {
+            initialX = event.touches[0].clientX - offsetX
+            initialY = event.touches[0].clientY - offsetY
+        } else {
+            initialX = event.clientX - offsetX
+            initialY = event.clientY = offsetY
+        }
+
         event.target.classList.add('dragged')
 
         let img = new Image()
@@ -103,8 +121,30 @@
     }
 
     _dragEndHandler = (event) => {
+        initialX = currentX;
+        initialY = currentY;
+
         event.target.classList.remove('dragged')
     }
+
+    _dragHandler = (event) => {
+        event.preventDefault()
+
+        if (event.type === "touchmove") {
+            currentX = event.touches[0].clientX - initialX
+            currentY = event.touches[0].clientY - initialY
+        } else {
+            currentX = event.clientX - initialX
+            currentY = event.clientY = initialY
+        }
+
+        offsetX = currentX
+        offsetY = currentY
+
+        event.target.style.transform = `translate3d(${currentX}px, ${currentY}px, 0)`
+    }
+
+    // dropzone events
 
     _dragEnterHandler = (event) => {
         event.preventDefault()
@@ -130,4 +170,4 @@
     }
 
     window.addEventListener('DOMContentLoaded', (event) => { initDragDrop() }, false)
-})();
+})()
