@@ -66,68 +66,93 @@
 // drop	ondrop	…an item is dropped on a valid drop target. (See Performing a Drop.)
 
 (function(){
-    var draggableElements = null
-    var dropzones = null
+    var activeElement;
+    var currentX;
+    var currentY;
+    var initialX;
+    var initialY;
+    var xOffset = 0;
+    var yOffset = 0;
 
     initDragDrop = () => {
-        draggableElements = Array.from( document.querySelectorAll('.draggable') )
-        dropzones = Array.from( document.querySelectorAll('.dropzone') )
-        _addEventListener()
+        document.querySelectorAll('.dropzone').forEach(_addDropzoneEvents)
+        document.querySelectorAll('.draggable').forEach(_addDraggableEvents)
+        document.querySelectorAll('.moveable').forEach(_addMoveableEvents)
     }
 
-    _addEventListener = () => {
-        draggableElements.forEach((element) => {
-            element.addEventListener('dragstart', _dragStartHandler, false)
-            element.addEventListener('dragend', _dragEndHandler, false)
-        })
-        dropzones.forEach((element) => {
-            element.addEventListener('dragenter', _dragEnterHandler, false)
-            element.addEventListener('dragleave', _dragLeaveHandler, false)
-            element.addEventListener('dragover', _dragOverHandler, false)
-            element.addEventListener('drop', _dropHandler, false)
-        })
+    _addDropzoneEvents = (element) => {
+        element.addEventListener('dragover',    _dragOverHandler, false)
+        element.addEventListener('drop',        _dropHandler, false)
+        element.addEventListener('dragend',     _dropHandler, false)
+        element.addEventListener('touchend',    _dropHandler, false)
     }
 
-    _dragStartHandler = (event) => {
-        event.target.classList.add('dragged')
-
-        let img = new Image()
-        img.src = event.target.src
-
-        // event.dataTransfer.setDragImage(img, 10, 10)
-
-        // copy : indicates that the dragged data will be copied from its present location to the drop location.
-        // move : indicates that the dragged data will be moved from its present location to the drop location.
-        // link : indicates that some form of relationship or connection will be created between the source and drop locations.
-        event.dataTransfer.setData("text/html", event.target.outerHTML)
+    _addDraggableEvents = (element) => {
+        element.addEventListener('dragstart',   _dragStartHandler, false)
+        element.addEventListener('touchstart',  _dragStartHandler, false)
     }
 
-    _dragEndHandler = (event) => {
-        event.target.classList.remove('dragged')
+    _addMoveableEvents = (element) => {
+        element.addEventListener('dragstart',   _moveStartHandler, false)
+        element.addEventListener('touchstart',  _moveStartHandler, false)
+        element.addEventListener('drag',        _moveHandler, false)
+        element.addEventListener('touchmove',   _moveHandler, false)
     }
 
-    _dragEnterHandler = (event) => {
-        event.preventDefault()
-        if ( !dropzones.includes(event.target) ) return
-        event.target.classList.add('drobable')
-    }
-
-    _dragLeaveHandler = (event) => {
-        event.preventDefault()
-        if ( !dropzones.includes(event.target) ) return
-        event.target.classList.remove('drobable')
-    }
+    // dropzone events
 
     _dragOverHandler = (event) => {
         event.preventDefault()
         event.dataTransfer.dropEffect = 'copy';
-        // event.target.classList.remove('dragged')
     }
 
     _dropHandler = (event) => {
         event.preventDefault()
-        event.target.insertAdjacentHTML('beforeend', event.dataTransfer.getData('text/html'))
+
+        initialX = currentX
+        initialY = currentY
+
+        if (activeElement.classList.contains('draggable')) {
+            let imageElement = document.createElement('img')
+            imageElement.src = base64ImageEncode(activeElement, activeElement.width, activeElement.height)
+            imageElement.classList.add('moveable')
+            _addMoveableEvents(imageElement)
+            event.target.appendChild(imageElement)
+        }
     }
 
-    window.addEventListener('DOMContentLoaded', (event) => { initDragDrop() }, false)
-})();
+    // draggable events
+
+    _dragStartHandler = (event) => {
+        activeElement = event.target
+    }
+
+    // moveable events
+
+    _moveStartHandler = (event) => {
+        activeElement = event.target
+        if (event.type === "touchstart") {
+            initialX = event.touches[0].clientX - xOffset
+            initialY = event.touches[0].clientY - yOffset
+        } else {
+            initialX = event.clientX - xOffset
+            initialY = event.clientY - yOffset
+        }
+    }
+
+    _moveHandler = (event) => {
+        event.preventDefault()
+        if (event.type === "touchmove") {
+            currentX = event.touches[0].clientX - initialX
+            currentY = event.touches[0].clientY - initialY
+        } else {
+            currentX = event.clientX - initialX
+            currentY = event.clientY - initialY
+        }
+        xOffset = currentX
+        yOffset = currentY
+        activeElement.style.transform = `translate3d(${currentX}px, ${currentY}px, 0)`
+    }
+
+    window.addEventListener('DOMContentLoaded', () => { initDragDrop() }, false)
+})()
