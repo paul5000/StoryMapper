@@ -72,6 +72,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
+* **Jekaterina Aleksejeva** - *Initial work* - [RadioHamster](https://github.com/RadioHamster)
 * **Paul Biedermann** - *Initial work* - [paul5000](https://github.com/paul5000)
 * **Henrik Kingerske** - *overall reworked* - [kinger-de](https://github.com/kinger-de)
 
