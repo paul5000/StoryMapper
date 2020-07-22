@@ -1,6 +1,6 @@
 interact(".dropzone").dropzone({
     accept: '.draggable',
-    ondrop: function (event) {
+    ondrop: (event) => {
         const item = event.relatedTarget
         let imageElement = document.createElement('img')
         imageElement.src = base64ImageEncode(item, item.width, item.height)
@@ -9,13 +9,31 @@ interact(".dropzone").dropzone({
     }
 })
 
-interact(".draggable").draggable({ startAxis: 'y' });
+interact(".draggable").draggable({
+    startAxis: 'xy',
+    lockAxis: 'start',
+    cursorChecker: (action, interactable, element, interacting) => {
+        switch (action.axis) {
+            case 'x': return 'ew-resize'
+            case 'y': return 'ns-resize'
+            default: return interacting ? 'grabbing' : 'grab'
+        }
+    },
+    onmove: (event) => {
+        if (event.dy != 0) {
+            // event.target.parentNode.parentNode.scrollLeft += event.dy
+        }
+        if (event.dx != 0) {
+            event.target.parentNode.parentNode.scrollLeft += event.dx
+        }
+    }
+});
 
 interact(".moveable").draggable({
-    onmove: function (event) {
+    onmove: (event) => {
         event.target.style.left = `${event.target.offsetLeft + event.dx}px`
         event.target.style.top = `${event.target.offsetTop + event.dy}px`
-    },
+    }
 });
 
 // Event	On Event Handler	Fires when…
