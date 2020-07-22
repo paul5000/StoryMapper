@@ -39,5 +39,7 @@
                     })
             },
         });
+        // show screen 2
+        showScreen('#screen-3')
     }
 })(window, document)
