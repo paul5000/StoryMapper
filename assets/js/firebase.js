@@ -1,14 +1,24 @@
-(function(){
+(function(window, document){
     // Initialize Firebase
-    firebase.initializeApp('../../config.json');
+    firebase.initializeApp({
+        "apiKey": "AIzaSyBxlBVs8pTzztz9bIEdfEwa2xuguSvDPXA",
+        "authDomain": "storycatcher-c2021.firebaseapp.com",
+        "databaseURL": "https://storycatcher-c2021.firebaseio.com",
+        "projectId": "storycatcher-c2021",
+        "storageBucket": "storycatcher-c2021.appspot.com",
+        "messagingSenderId": "139292647133",
+        "appId": "1:139292647133:web:033d6d3b986466e163c534",
+        "measurementId": "G-P0LNTLR72F"
+    });
     // reference to storage    
     const storageRef = firebase.storage().ref();
-    function report() {
+
+    report = () => {
         // name for this report
         let name = `${new Date()}`
         // elements to store
-        let cameraFrame = document.querySelector("#screen2 .camera--frame")
-        let textInput = document.querySelector("#screen2 .text--input textarea")
+        let cameraFrame = document.querySelector("#screen-2 .camera--frame")
+        let textInput = document.querySelector("#screen-2 .text--input textarea")
         // store textarea value in firebase
         storageRef
             .child(`${name}/feedback.txt`)
@@ -30,4 +40,4 @@
             },
         });
     }
-})
+})(window, document)

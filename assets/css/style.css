@@ -111,6 +111,7 @@ textarea { width: 100%; }
 .sticker__list {
   display: flex;
   flex-flow: row nowrap;
+  margin-top: 1rem;
 }
 
 .scrollable--x {
