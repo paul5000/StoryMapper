@@ -1,10 +1,7 @@
 interact(".dropzone").dropzone({
     accept: '.draggable',
-    overlap: 0.75,
-    ondropactivate: function (event) {
+    ondrop: function (event) {
         const item = event.relatedTarget
-        item.classList.add('dragging')
-
         let imageElement = document.createElement('img')
         imageElement.src = base64ImageEncode(item, item.width, item.height)
         imageElement.classList.add('moveable')
@@ -12,24 +9,13 @@ interact(".dropzone").dropzone({
     }
 })
 
-interact(".draggable").draggable({
-    onstart: function (event) {
-    },
-    onmove: function (event) {
-    },
-    onend: function (event) {
-    }
-});
+interact(".draggable").draggable({ startAxis: 'y' });
 
 interact(".moveable").draggable({
-    onstart: function (event) {
-    },
     onmove: function (event) {
         event.target.style.left = `${event.target.offsetLeft + event.dx}px`
         event.target.style.top = `${event.target.offsetTop + event.dy}px`
     },
-    onend: function (event) {
-    }
 });
 
 // Event	On Event Handler	Fires when…
