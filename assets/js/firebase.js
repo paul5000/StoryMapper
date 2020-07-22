@@ -19,27 +19,27 @@
         // elements to store
         let cameraFrame = document.querySelector("#screen-2 .camera--frame")
         let textInput = document.querySelector("#screen-2 .text--input textarea")
-        // store textarea value in firebase
-        storageRef
-            .child(`${name}/feedback.txt`)
-            .putString(textInput.value)
-            .then(function (snapshot) {
-                console.log(`Feedback for '${name}' transferd.`)
-            });
         // store screenshot from picture in firebase
         html2canvas(cameraFrame, {
             allowTaint : false,
             useCORS: true,
             onrendered: function (canvas) {
+                // store textarea value in firebase
+                storageRef
+                    .child(`${name}/feedback.txt`)
+                    .putString(textInput.value)
+                    .then(function (snapshot) {
+                        console.log(`Feedback for '${name}' transferd.`)
+                    });
                 storageRef
                     .child(`${name}/screenshot.png`)
                     .putString(canvas.toDataURL(), "data_url")
                     .then(function (snapshot) {
                         console.log(`Screenshot for '${name}' transferd.`)
                     })
+                // show screen 2
+                showScreen('#screen-3')
             },
         });
-        // show screen 2
-        showScreen('#screen-3')
     }
 })(window, document)
