@@ -56,12 +56,8 @@ textarea { width: 100%; }
   line-height: 0;
 }
 
-.camera--frame > * {
-  position: absolute;
-  left: 0; top: 0;
-}
-
-.camera--frame > *:first-child {
+#camera--view,
+#camera--picture {
   position: relative;
   width: 100%;
   height: auto;
@@ -106,12 +102,16 @@ textarea { width: 100%; }
  * Stickers
  */
 
-.stickers {
+.sticker {
+  margin: 0.5rem;
+  height: 64px;
+  width: auto;
+}
+
+.sticker__list {
   display: flex;
   flex-flow: row nowrap;
 }
-
-.stickers > * { margin: 0.5rem; }
 
 .scrollable--x {
   overflow-x: scroll;
@@ -119,7 +119,21 @@ textarea { width: 100%; }
 
 .text--input { padding-top: 1rem; }
 
-.draggable {
+.dropzone,
+.draggable,
+.moveable {
   touch-action: none;
   user-select: none;
+}
+
+.dropzone {
+  position: absolute;
+  left: 0; top: 0;
+  height: 100%; width: 100%;
+  overflow: hidden;
+}
+
+.dropzone > * {
+  position: absolute;
+  left: 0; top: 0;
 }
