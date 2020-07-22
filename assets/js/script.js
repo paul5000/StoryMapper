@@ -61,6 +61,13 @@
     startCameraStream()
   }
 
+  reset = () => {
+    var drops = document.querySelectorAll('.dropzone > *')
+    drops.forEach((drop) => drop.remove())
+    document.querySelector("#screen-2 .text--input textarea").value = ''
+    showScreen('#screen-1')
+  }
+
   // run startup script if DOM loaded
   window.addEventListener("DOMContentLoaded", startUp, false)
 })(window, document)
