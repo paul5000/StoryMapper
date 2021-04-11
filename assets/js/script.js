@@ -14,15 +14,12 @@
 
   /* webcam element */
 
-  const cameraOptions = {
-    video: { facingMode: "environment" },
-    audio: false
-  };
-
-  // stream webcams
   startWebcams = () => {
     document.querySelectorAll('video[data-webcam]').forEach(function (webcam) {
-      navigator.mediaDevices.getUserMedia(cameraOptions)
+      navigator.mediaDevices.getUserMedia({
+        video: { facingMode: "environment" },
+        audio: false
+      })
       .then((stream) => {
         track = stream.getTracks()[0];
         webcam.srcObject = stream;
@@ -32,7 +29,6 @@
       });
     });
   }
-  window.addEventListener("DOMContentLoaded", startWebcams, false);
 
   /* Screens */
 
@@ -63,71 +59,44 @@
 
   /* Script */
 
-  // take a picture from camera stream
-  takePicture = () => {
-    // camera view to camera picture
-    cameraPicture.src = base64ImageEncode(
-      cameraView,
-      cameraView.videoWidth,
-      cameraView.videoHeight)
-    // show screen 2
-    showScreen('#screen-2')
-  }
+  takePicture = (event, properties = {}) => {
+    event.preventDefault();
+    let soureElement = document.getElementById(properties.sourceId) || false;
+    let destinationElement = document.getElementById(properties.destinationId) || false;
 
-  takePicture = () => {
+    if (soureElement && destinationElement) {
+      destinationElement.src = base64ImageEncode(
+        soureElement,
+        soureElement.videoWidth,
+        soureElement.videoHeight
+      );
+    }
   }
 
   cameraTrigger = () => {
     let cameraTriggers = document.querySelectorAll('[data-take-picture]').forEach(function (cameraTrigger) {
-      let properties = (typeof cameraTrigger.dataset.takePicture !== 'undefined' && toggleElement.dataset.toggleClass !== '') ? toggleElement.dataset.toggleClass : 'active';
-      window.addEventListener(element, takePicture, false);
+      let properties = JSON.parse(cameraTrigger.dataset.takePicture || '{}');
+      cameraTrigger.addEventListener("click", (event) => takePicture(event, properties), false);
     });
   }
-  window.addEventListener("DOMContentLoaded", cameraTrigger, false)
 
-  // startup script
-  startUp = () => {
-    // show first screen
-    document.querySelector('#screen-1').classList.remove('d-none')
-    // start webcam
-    startCameraStream()
-  }
+  // // startup script
+  // startUp = () => {
+  //   // show first screen
+  //   document.querySelector('#screen-1').classList.remove('d-none')
+  //   // start webcam
+  //   startCameraStream()
+  // }
 
-  reset = () => {
-    document.querySelector("#screen-2 .text--input textarea").value = ''
-    showScreen('#screen-1')
-  }
+  // reset = () => {
+  //   document.querySelector("#screen-2 .text--input textarea").value = ''
+  //   showScreen('#screen-1')
+  // }
 
-  // run startup script if DOM loaded
-  // window.addEventListener("DOMContentLoaded", startUp, false)
-
-  geoFindMe = () => {
-    var output = document.getElementById("out");
-
-    if (!navigator.geolocation) {
-      output.innerHTML = "<p>Geolokation wird von ihrem Browser nicht unterstützt</p>";
-      return;
-    }
-
-    success = (position) => {
-      var latitude = position.coords.latitude;
-      var longitude = position.coords.longitude;
-
-      output.innerHTML = '<p>Die Latitude ist ' + latitude + '° <br>Die Longitude ist ' + longitude + '°</p>';
-
-      var img = new Image();
-      img.src = "http://maps.googleapis.com/maps/api/staticmap?center=" + latitude + "," + longitude + "&zoom=13&size=300x300&sensor=false";
-
-      output.appendChild(img);
-    };
-
-    error = () => {
-      output.innerHTML = "Es war nicht möglich Sie zu lokalisieren";
-    };
-
-    output.innerHTML = "<p>Lokalisieren…</p>";
-
-    navigator.geolocation.getCurrentPosition(success, error);
-  }
+  // StartUp
+  window.addEventListener("DOMContentLoaded", () => {
+    startWebcams();
+    cameraTrigger();
+  }, false);
 
 })(window, document)
