@@ -37,6 +37,8 @@ a {
   }
 }
 
+p { margin-top: 0; }
+
 strong {
   font-weight: 700;
 }
@@ -86,6 +88,67 @@ button, .button {
 
   a {
     text-decoration: none;
+  }
+}
+
+.form {
+  fieldset {
+    padding: 0; margin: 0 auto;
+    border: 0 none;
+
+    &:not(:first) {
+      margin-top: 1em;
+    }
+  }
+
+  textarea, input, select {
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, .9);
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color:rgba(255, 255, 255, .9);
+    padding: 0.3em 0.6em;
+  }
+
+  &__field {
+    margin-top: 1em;
+    display: flex;
+    flex-flow: column nowrap;
+
+    & > label {
+      text-align: left;
+      margin-bottom: 0.5em;
+    }
+  }
+}
+
+.camera {
+
+  &__frame {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 1em solid rgba(255, 255, 255, .9);
+    border-radius: 3px;
+    box-shadow: var(--shadow);
+    line-height: 0;
+
+    & > * {
+      max-width: 100%;
+      height: auto;
+    }
+
+    & > .camera__actions {
+      position: absolute;
+      bottom: 2em;
+      display: flex;
+      flex-flow: row wrap;
+      width: 100%;
+      justify-content: center;
+
+      & > * {
+        margin: 0.5em;
+      }
+    }
   }
 }
 
@@ -208,7 +271,8 @@ button, .button {
 
 /** Site : Onboarding (Home) **/
 
-.site--onboarding {
+.site--onboarding,
+.site--story-form {
   .site__header {
     margin-bottom: auto;
   }
@@ -216,5 +280,22 @@ button, .button {
   .site__content {
     text-align: center;
     font-size: 1.1em;
+  }
+}
+
+.card {
+  display: flex;
+  flex-flow: column nowrap;
+
+  &__header {
+    margin-bottom: 1em;
+  }
+
+  &__content {
+
+  }
+
+  &__footer {
+    margin-top: 1em;
   }
 }
