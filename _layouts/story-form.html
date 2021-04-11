@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  {% include head.html %}
+</head>
+
+<body>
+
+  <div class="site site--dark site--story-form">
+    {% include header.html %}
+
+    <main class="site__content">
+
+      <form id="" class="">
+
+        <fieldset id="step-1" class="step">
+
+          <section class="card">
+            <header class="card__header">
+              <h1 class="card__title">Take a picture of your drawing to start a story and share your ideas.</h1>
+            </header>
+            <div class="card__content">
+              <div class="camera--frame">
+                <video id="camera-1" class="camera--view" autoplay playsinline data-webcam></video>
+              </div>
+            </div>
+            <footer class="card__footer">
+              <button class="button button-primary" data-take-picture="{'sourceId' => 'camera-1', 'destination' => 'camera--picture'}">Continue</button>
+            </footer>
+          </section>
+
+        </fieldset>
+
+        <fieldset id="step-2" class="step">
+
+          <section class="card">
+            <header class="card__header">
+              <h1 class="card__title">Add some details to your story to let us know what's going on.</h1>
+            </header>
+            <div class="card__content">
+              <div class="camera--frame">
+                <img id="camera--picture" src="//:0" alt="your picture" />
+              </div>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="Provide some context to your story..."></textarea>
+            </div>
+            <footer class="card__footer">
+              <button class="button button-secondary" onclick="takePicture()">Re-take a picture</button>
+              <button class="button button-primary" onclick="takePicture()">Send your story</button>
+            </footer>
+          </section>
+
+        </fieldset>
+
+        <fieldset id="step-3" class="step">
+
+          <section class="card">
+            <header class="card__header">
+              <h1 class="card__title">Thanks for participating</h1>
+            </header>
+            <div class="card__content">
+              <p>Your submission has been made.</p>
+            </div>
+            <footer class="card__footer">
+              <button type="submit" class="button button-primary">Do it again</button>
+            </footer>
+          </section>
+
+        </fieldset>
+
+      </form>
+
+    </main>
+
+    {% include footer.html %}
+  </div>
+
+  {% include foot.html %}
+</body>
+
+</html>
