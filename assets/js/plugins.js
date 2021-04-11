@@ -1,4 +1,4 @@
-(function (window, document, undefined) {
+;(function (window, document, undefined) {
 
     const addEvent = function (eventName, element, cb) {
         if (element.addEventListener)  // W3C DOM

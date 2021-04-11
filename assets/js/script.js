@@ -1,36 +1,55 @@
 (function (window, document) {
+
+  /* late script loading */
+
+  // let scripts = [
+  //   'assets/js/geolocation.js'
+  // ];
+  // scripts.forEach((scriptPath) => {
+  //   let scriptElement = document.createElement('script');
+  //   scriptElement.type = 'text/javascript';
+  //   scriptElement.src = scriptPath;
+  //   document.getElementsByTagName('body')[0].appendChild(scriptElement);
+  // });
+
+  /* webcam element */
+
   const cameraOptions = {
     video: { facingMode: "environment" },
     audio: false
-  },
-    cameraView = document.querySelector("#camera--view"),
-    cameraPicture = document.querySelector("#camera--picture")
+  };
+
+  // stream webcams
+  startWebcams = () => {
+    document.querySelectorAll('video[data-webcam]').forEach(function (webcam) {
+      navigator.mediaDevices.getUserMedia(cameraOptions)
+      .then((stream) => {
+        track = stream.getTracks()[0];
+        webcam.srcObject = stream;
+      })
+      .catch((error) => {
+        console.error("Oops. Something is broken.", error);
+      });
+    });
+  }
+  window.addEventListener("DOMContentLoaded", startWebcams, false);
+
+  /* Screens */
 
   // hide all screens
   hideScreens = () => {
-    document.querySelectorAll('.screen').forEach(function (screen) {
-      screen.classList.add('d-none')
-    })
+    document.querySelectorAll('.screen').forEach((screen) => {
+      screen.classList.add('d-none');
+    });
   }
 
   // show screen by id
   showScreen = (id) => {
-    hideScreens()
-    document.querySelector(id).classList.remove('d-none')
+    hideScreens();
+    document.querySelector(id).classList.remove('d-none');
   }
 
-  // stream webcam into camera_view
-  startCameraStream = () => {
-    navigator.mediaDevices
-      .getUserMedia(cameraOptions)
-      .then(function (stream) {
-        track = stream.getTracks()[0];
-        cameraView.srcObject = stream;
-      })
-      .catch(function (error) {
-        console.error("Oops. Something is broken.", error);
-      });
-  }
+  /* Base64 */
 
   base64ImageEncode = (image, width, height) => {
     let canvas = document.createElement('canvas')
@@ -42,6 +61,8 @@
     return dataUrl
   }
 
+  /* Script */
+
   // take a picture from camera stream
   takePicture = () => {
     // camera view to camera picture
@@ -52,6 +73,17 @@
     // show screen 2
     showScreen('#screen-2')
   }
+
+  takePicture = () => {
+  }
+
+  cameraTrigger = () => {
+    let cameraTriggers = document.querySelectorAll('[data-take-picture]').forEach(function (cameraTrigger) {
+      let properties = (typeof cameraTrigger.dataset.takePicture !== 'undefined' && toggleElement.dataset.toggleClass !== '') ? toggleElement.dataset.toggleClass : 'active';
+      window.addEventListener(element, takePicture, false);
+    });
+  }
+  window.addEventListener("DOMContentLoaded", cameraTrigger, false)
 
   // startup script
   startUp = () => {
@@ -67,7 +99,7 @@
   }
 
   // run startup script if DOM loaded
-  window.addEventListener("DOMContentLoaded", startUp, false)
+  // window.addEventListener("DOMContentLoaded", startUp, false)
 
   geoFindMe = () => {
     var output = document.getElementById("out");
@@ -97,4 +129,5 @@
 
     navigator.geolocation.getCurrentPosition(success, error);
   }
+
 })(window, document)

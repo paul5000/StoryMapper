@@ -10,4 +10,4 @@ For inspiration, feel free to visit our  [living map](https://padlet.com/hannevr
 
 To contribute your own story, please follow the instructions on the StoryMapper and the steps below to share it with your neighbourhood.
 
-[Start your story](#){: .button .button--primary}
+[Start your story](your-story.html){: .button .button--primary}
