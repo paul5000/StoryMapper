@@ -67,6 +67,7 @@
     let userAge = document.querySelector("#report-form #user-age");
     let userGender = document.querySelector("#report-form #user-gender");
     let userEmail = document.querySelector("#report-form #user-email");
+    let userCoordinates = document.querySelector("#report-form #user-coordinates");
     // let userGPS = document.querySelector("#screen-2 .text--input textarea");
 
     storageRef
@@ -76,15 +77,28 @@
 
     storageRef
       .child(`${reportName}/${reportName}_feedback.txt`)
-      .putString(`
-        ${userStory.value}
-        ${userRelationship.value}
-        ${userName.value}
-        ${userAge.value}
-        ${userGender.value}
-        ${userEmail.value}
-      `)
+      .putString(
+`
+Story: ${userStory.value}
+
+Name: ${userName.value}
+Email: ${userEmail.value}
+Age: ${userAge.value}
+Gender: ${userGender.value}
+Relationship: ${userRelationship.value}
+Coordinates: ${userCoordinates.value}
+`)
       .then(() => console.log(`Feedback for report '${reportName}' transferd.`));
+  }
+
+  initGPSTriggers = () => {
+    document.querySelectorAll('input[data-current-position]').forEach((gpsTrigger) => {
+      gpsTrigger.value =
+      navigator.geolocation.getCurrentPosition(
+        (position) => gpsTrigger.value = `${position.coords.latitude},${position.coords.longitude}`,
+        () => gpsTrigger.value ="we cant locate you"
+      );
+    });
   }
 
   // StartUp
@@ -102,6 +116,7 @@
     });
     initWebcams();
     initCameraTriggers();
+    initGPSTriggers();
     document.querySelectorAll('#submit-report').forEach((button) => {
       button.addEventListener('click', (event) => {
         sendReport();
