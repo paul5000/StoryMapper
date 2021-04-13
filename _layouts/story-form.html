@@ -12,113 +12,96 @@
 
     <main class="site__content">
 
-      <form id="" class="form" data-steps>
+      <div id="report-form" class="form" data-steps>
 
-        <fieldset id="step-1" class="step">
-
-          <section class="card">
-            <header class="card__header">
-              <h1 class="card__title">Take a picture of your drawing to start a story and share your ideas.</h1>
-            </header>
-            <div class="card__content">
-              <div class="camera__frame">
-                <video id="camera-1" class="camera__view" autoplay playsinline data-webcam></video>
-                <div class="camera__actions">
-                  <button class="button button--primary" data-take-picture='{"sourceId": "camera-1", "destinationId": "camera-picture"}'>Take Picture</button>
-                </div>
+        <section class="card">
+          <header class="card__header">
+            <h1 class="card__title">Take a picture of your drawing to start a story and share your ideas.</h1>
+          </header>
+          <div class="card__content">
+            <div class="camera__frame" data-webcam>
+              <video id="camera-1" class="camera__view" autoplay playsinline poster="/assets/img/no_camera.png"></video>
+              <div class="camera__actions">
+                <button class="button button--primary" data-step-trigger="step-2" data-take-picture='{"sourceId": "camera-1", "destinationId": "camera-picture"}'>Take Picture</button>
               </div>
             </div>
-          </section>
+          </div>
+        </section>
 
-        </fieldset>
-
-        <fieldset id="step-2" class="step">
-
-          <section class="card">
-            <header class="card__header">
-              <h1 class="card__title">Add some details to your story to let us know what's going on.</h1>
-            </header>
-            <div class="card__content">
-              <div class="camera__frame">
-                <img id="camera-picture" src="//:0" alt="your picture" />
-              </div>
-              <div class="form__field">
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="Provide some context to your story..."></textarea>
-              </div>
+        <section class="card">
+          <header class="card__header">
+            <h1 class="card__title">Add some details to your story to let us know what's going on.</h1>
+          </header>
+          <div class="card__content">
+            <div class="camera__frame">
+              <img id="camera-picture" src="/assets/img/no_camera.png" alt="your picture" />
             </div>
-            <footer class="card__footer">
-              <button class="button button--secondary" onclick="takePicture()">Retake a picture</button>
-              <button class="button button--primary" onclick="takePicture()">Send your story</button>
-            </footer>
-          </section>
-
-        </fieldset>
-
-        <fieldset id="step-3" class="step">
-
-          <section class="card">
-            <header class="card__header">
-              <h1 class="card__title">Help us with our research and share some information about yourself.</h1>
-            </header>
-            <div class="card__content">
-              <p>All of your information is optional. The more information you provide, the more it helps us in our research.</p>
-              <div class="form__field">
-                <label for="#" class="form__label">What is your relationship to this area?</label>
-                <select class="form__select" aria-label="Default select example">
-                  <option selected>prefer not to answer</option>
-                  <option value="live">I live here</option>
-                  <option value="work">I work here</option>
-                  <option value="visit">I am visiting</option>
-                  <option value="other">other</option>
-                </select>
-              </div>
-              <div class="form__field">
-                <label for="disabledTextInput" class="form-label">Your name</label>
-                <input type="text" id="disabledTextInput" class="form-control" placeholder="Firstname Surename">
-              </div>
-              <div class="form__field">
-                <label for="disabledTextInput" class="form-label">How old are you?</label>
-                <input type="number" id="disabledTextInput" class="form-control" min="1" max="199" placeholder="26">
-              </div>
-              <div class="form__field">
-                <label for="exampleFormControlTextarea1" class="form-label">What is your gender?</label>
-                <select class="form-select" aria-label="Default select example">
-                  <option selected>prefer not to answer</option>
-                  <option value="female">female</option>
-                  <option value="male">male</option>
-                  <option value="diverse">diverse</option>
-                </select>
-              </div>
-              <div class="form__field">
-                <label for="disabledTextInput" class="form-label">Your email</label>
-                <input type="email" id="disabledTextInput" class="form-control" placeholder="name@website.com">
-              </div>
+            <div class="form__field">
+              <textarea class="form-control" id="user-story" rows="5" placeholder="Provide some context to your story..."></textarea>
             </div>
-            <footer class="card__footer">
-              <button class="button button--secondary" onclick="takePicture()">Send without</button>
-              <button class="button button--primary" onclick="takePicture()" disabled="disabled">Send with</button>
-            </footer>
-          </section>
+          </div>
+          <footer class="card__footer">
+            <button class="button" data-step-trigger="step-1">Retake a picture</button>
+            <button class="button button--primary"  data-step-trigger="step-3">Send your story</button>
+          </footer>
+        </section>
 
-        </fieldset>
-
-        <fieldset id="step-4" class="step">
-
-          <section class="card">
-            <header class="card__header">
-              <h1 class="card__title">Thanks for participating.</h1>
-            </header>
-            <div class="card__content">
-              <p>Your story will be published tomorrow on our <a href="https://padlet.com/hannevrebos/Vaartkom" target="_blank">living map</a>. +Feel free to visit the map to discover more interessting stories.</p>
+        <section class="card">
+          <header class="card__header">
+            <h1 class="card__title">Help us with our research and share some information about yourself.</h1>
+          </header>
+          <div class="card__content">
+            <p>All of your information is optional. The more information you provide, the more it helps us in our research.</p>
+            <div class="form__field">
+              <label for="user-relationship" class="form__label">What is your relationship to this area?</label>
+              <select id="user-relationship" class="form__select" aria-label="Default select example">
+                <option selected>prefer not to answer</option>
+                <option value="live">I live here</option>
+                <option value="work">I work here</option>
+                <option value="visit">I am visiting</option>
+                <option value="other">other</option>
+              </select>
             </div>
-            <footer class="card__footer">
-              <a class="button button--primary" href="index.html">Back to Home</a>
-            </footer>
-          </section>
+            <div class="form__field">
+              <label for="user-name" class="form-label">Your name</label>
+              <input type="text" id="user-name" class="form-control" placeholder="Firstname Surename">
+            </div>
+            <div class="form__field">
+              <label for="user-age" class="form-label">How old are you?</label>
+              <input type="number" id="user-age" class="form-control" min="1" max="199" placeholder="26">
+            </div>
+            <div class="form__field">
+              <label for="user-gender" class="form-label">What is your gender?</label>
+              <select id="user-gender" class="form-select" aria-label="Default select example">
+                <option selected>prefer not to answer</option>
+                <option value="female">female</option>
+                <option value="male">male</option>
+                <option value="diverse">diverse</option>
+              </select>
+            </div>
+            <div class="form__field">
+              <label for="user-email" class="form-label">Your email</label>
+              <input type="email" id="user-email" class="form-control" placeholder="name@website.com">
+            </div>
+          </div>
+          <footer class="card__footer">
+            <button id="submit-report" class="button button--primary" data-step-trigger="step-4">Submit</button>
+          </footer>
+        </section>
 
-        </fieldset>
+        <section class="card">
+          <header class="card__header">
+            <h1 class="card__title">Thanks for participating.</h1>
+          </header>
+          <div class="card__content">
+            <p>Your story will be published tomorrow on our <a href="https://padlet.com/hannevrebos/Vaartkom" target="_blank">living map</a>. Feel free to visit the map to discover more interessting stories.</p>
+          </div>
+          <footer class="card__footer">
+            <a class="button button" href="index.html">Back to Home</a>
+          </footer>
+        </section>
 
-      </form>
+      </div>
 
     </main>
 

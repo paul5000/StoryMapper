@@ -10,7 +10,7 @@
         "appId": "1:139292647133:web:033d6d3b986466e163c534",
         "measurementId": "G-P0LNTLR72F"
     });
-    // reference to storage    
+    // reference to storage
     const storageRef = firebase.storage().ref();
 
     report = () => {
