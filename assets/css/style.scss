@@ -56,10 +56,12 @@ button, .button {
   cursor: pointer;
   outline: none;
   transition: color 100ms ease-out, background-color 200ms ease-out, border-color 300ms ease-out;
+  outline: none;
 
   &:hover {
     background-color: rgba(0, 0, 0, 0.7);
     color: rgba(255, 255, 255, 1);
+    text-decoration: none;
   }
 }
 
@@ -126,11 +128,13 @@ button, .button {
 
   &__frame {
     position: relative;
-    background-color: rgba(0, 0, 0, 0.7);
-    border: 1em solid rgba(255, 255, 255, .9);
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 0.5em solid rgba(255, 255, 255, .9);
     border-radius: 3px;
     box-shadow: var(--shadow);
     line-height: 0;
+    display: inline-block;
+    min-width: 50%; min-height: 20rem;
 
     & > * {
       max-width: 100%;
@@ -187,7 +191,8 @@ button, .button {
   }
 
   &__title {
-    font-size: 1.2em;
+    line-height: 1;
+    font-size: 1.4em;
     font-weight: normal;
     display: flex;
     flex-flow: row nowrap;
@@ -196,8 +201,8 @@ button, .button {
     &::before {
       content: '';
       display: block;
-      height: 24px; width: 24px;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24' width='24' fill='none' stroke='rgba(0,0,0,0.95)' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true' viewBox='0 0 24 24'%3E%3Cpath d='M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z'/%3E%3Ccircle cx='12' cy='13' r='4'/%3E%3C/svg%3E");
+      height: 70px; width: 26px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='70' width='26' fill='rgba(255, 255, 255, .9)' stroke='none' aria-hidden='true' viewBox='0 0 26 70'%3E%3Cellipse cx='13.5' cy='12' rx='10.5' ry='10'/%3E%3Cpath d='M24,24l-21,0l21,21l0,-21Z'/%3E%3Crect x='3' y='47' width='21' height='21'/%3E%3C/svg%3E");
       margin-right: 0.5em;
     }
   }
@@ -244,17 +249,41 @@ button, .button {
 
 .site--dark {
   background: url('../img/science_dark.png') repeat;
-  box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+  box-shadow: inset 0 0 2em rgba(0, 0, 0, .5);
   text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
   color: rgba(255, 255, 255, .9);
 
+  button, .button {
+    color: rgba(255, 255, 255, 0.7);
+    border-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(0, 0, 0, 0.7);
+
+    &:hover, &:focus, &:active {
+      color: rgba(255, 255, 255, 0.7);
+      border-color: rgba(255, 255, 255, 0.7);
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    &:disabled {
+      color: rgba(128, 128, 128, 0.7);
+      border-color: rgba(128, 128, 128, 0.7);
+      background-color: rgba(0, 0, 0, 0.7);
+      cursor: not-allowed;
+
+      &:hover, &:focus, &:active {
+        color: rgba(128, 128, 128, 0.7);
+        border-color: rgba(128, 128, 128, 0.3);
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+    }
+  }
+
   .button--primary {
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.3);
     border-color: rgba(var(--primary-color-rgb), 1);
     color: rgba(var(--primary-color-rgb), 1);
 
     &:hover, &:focus, &:active {
-      background-color: transparent;
       border-color: rgba(var(--secondary-color-rgb), 1);
       color: rgba(var(--secondary-color-rgb), 1);
     }
@@ -265,7 +294,7 @@ button, .button {
   }
 
   .site__title::before {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24' width='24' fill='none' stroke='rgba(255, 255, 255, .9)' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true' viewBox='0 0 24 24'%3E%3Cpath d='M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z'/%3E%3Ccircle cx='12' cy='13' r='4'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='70' width='26' fill='rgba(255, 255, 255, .9)' stroke='none' aria-hidden='true' viewBox='0 0 26 70'%3E%3Cellipse cx='13.5' cy='12' rx='10.5' ry='10'/%3E%3Cpath d='M24,24l-21,0l21,21l0,-21Z'/%3E%3Crect x='3' y='47' width='21' height='21'/%3E%3C/svg%3E");
   }
 }
 
@@ -291,11 +320,25 @@ button, .button {
     margin-bottom: 1em;
   }
 
+  &__title {
+    font-size: 1.6em;
+  }
+
   &__content {
 
   }
 
   &__footer {
     margin-top: 1em;
+  }
+}
+
+[data-steps] {
+  .step {
+    display: block;
+
+    &.hidden {
+      display: none;
+    }
   }
 }
