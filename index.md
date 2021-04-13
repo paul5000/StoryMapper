@@ -2,7 +2,7 @@
 title: Hello Storyteller - City Story
 layout: onboarding
 ---
-# Hello Storyteller Paul,
+# Hello Storyteller,
 
 thanks for participating in our interactive research project, dedicated to create and share visual stories for collaborative community mapping and sense-making.
 
