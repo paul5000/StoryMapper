@@ -1,12 +1,12 @@
 {
-    "short_name": "StoryCapture",
-    "name": "StoryCapture - Start a story and share your ideas.",
+    "short_name": "StoryMapper",
+    "name": "StoryMapper - Start a story and share your ideas.",
     "icons": [{
         "src": "../assets/img/icon.png",
         "type": "image/png",
         "sizes": "192x192"
     }],
-    "start_url": "/StoryCatcher_app/",
+    "start_url": "/StoryMapper/",
     "background_color": "#0a0a0a",
     "theme_color": "#ffcf31"
 }
