@@ -91,13 +91,14 @@ Coordinates: ${userCoordinates.value}
       .then(() => console.log(`Feedback for report '${reportName}' transferd.`));
   }
 
-  initGPSTriggers = () => {
-    document.querySelectorAll('input[data-current-position]').forEach((gpsTrigger) => {
-      gpsTrigger.value =
-      navigator.geolocation.getCurrentPosition(
-        (position) => gpsTrigger.value = `${position.coords.latitude},${position.coords.longitude}`,
-        () => gpsTrigger.value ="we cant locate you"
-      );
+  initGPSInputs = () => {
+    document.querySelectorAll('input[data-current-position]').forEach((gpsInput) => {
+      gpsInput.addEventListener('click', (event) => {
+        navigator.geolocation.getCurrentPosition(
+          (position) => event.target.value = `${position.coords.latitude},${position.coords.longitude}`,
+          () => event.target.value ="we cant locate you"
+        );
+      }, false);
     });
   }
 
@@ -116,7 +117,7 @@ Coordinates: ${userCoordinates.value}
     });
     initWebcams();
     initCameraTriggers();
-    initGPSTriggers();
+    initGPSInputs();
     document.querySelectorAll('#submit-report').forEach((button) => {
       button.addEventListener('click', (event) => {
         sendReport();
