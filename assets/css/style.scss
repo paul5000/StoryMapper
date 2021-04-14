@@ -37,7 +37,7 @@ a {
   }
 }
 
-p { margin-top: 0; }
+p { margin-bottom: 0; }
 
 strong {
   font-weight: 700;
@@ -196,6 +196,7 @@ button, .button {
     font-weight: normal;
     display: flex;
     flex-flow: row nowrap;
+    align-items: flex-end;
     margin: 0;
 
     &::before {
@@ -209,7 +210,8 @@ button, .button {
 
   &__content {
     max-width: 42em;
-    padding: 1rem; margin: 1em auto;
+    padding: 1rem;
+    margin: 0 auto;
   }
 
   &__footer {
@@ -321,15 +323,14 @@ button, .button {
   }
 
   &__title {
-    font-size: 1.6em;
-  }
-
-  &__content {
-
+    font-size: 1.2em;
   }
 
   &__footer {
     margin-top: 1em;
+    display: flex;
+    gap: 1em;
+    justify-content: center;
   }
 }
 

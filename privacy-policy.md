@@ -1,11 +1,11 @@
 ---
-title: Privacy Policy - City Story
+title: Privacy Policy - StoryMapper
 description: Privacy Policy for KU Leuven, how you hereby consent to our Privacy Policy and we use this informations.
 layout: default
 ---
 # Privacy Policy for KU Leuven
 
-At StoryMapper, accessible from https://paul5000.github.io/StoryCatchr_app/, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by StoryMapper and how we use it.
+At StoryMapper, accessible from https://paul5000.github.io/StoryMapper/, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by StoryMapper and how we use it.
 
 If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us.
 
