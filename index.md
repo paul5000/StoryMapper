@@ -1,8 +1,9 @@
 ---
-title: Hello Storyteller - City Story
+title: Hello Storyteller - StoryMapper
+description: Dedicated to create and share visual stories for collaborative community mapping and sense-making. Start a story and share your ideas.
 layout: onboarding
 ---
-# Hello Storyteller Paul,
+# Hello Storyteller,
 
 thanks for participating in our interactive research project, dedicated to create and share visual stories for collaborative community mapping and sense-making.
 

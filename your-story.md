@@ -1,4 +1,4 @@
 ---
-title: Your Story - City Story
+title: Your Story - StoryMapper
 layout: story-form
 ---

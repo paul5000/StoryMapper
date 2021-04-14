@@ -6,14 +6,14 @@ services:
     command: /bin/bash -c "chmod 777 /srv/jekyll && jekyll serve --force_polling"
     tty: true
     environment:
-      - FB_API_KEY: AIzaSyBxlBVs8pTzztz9bIEdfEwa2xuguSvDPXA
-      - FB_AUTH_DOMAIN: storycatcher-c2021.firebaseapp.com
-      - FB_DATABASEURL: https://storycatcher-c2021.firebaseio.com/
-      - FB_PROJECT_ID: storycatcher-c2021
-      - FB_STORAGE_BUCKET: storycatcher-c2021.appspot.com
-      - FB_MESSAGING_SENDER_ID: 139292647133
-      - FB_APP_ID: 1:139292647133:web:033d6d3b986466e163c534
-      - FB_MESUREMENT_ID: G-P0LNTLR72F
+      - FB_API_KEY=AIzaSyBxlBVs8pTzztz9bIEdfEwa2xuguSvDPXA
+      - FB_AUTH_DOMAIN=storycatcher-c2021.firebaseapp.com
+      - FB_DATABASEURL=https://storycatcher-c2021.firebaseio.com/
+      - FB_PROJECT_ID=storycatcher-c2021
+      - FB_STORAGE_BUCKET=storycatcher-c2021.appspot.com
+      - FB_MESSAGING_SENDER_ID=139292647133
+      - FB_APP_ID=1:139292647133:web:033d6d3b986466e163c534
+      - FB_MESUREMENT_ID=G-P0LNTLR72F
     ports:
       - 3000:4000
       - 3010:35729
