@@ -1,4 +1,4 @@
 ---
 title: Your Story - StoryMapper
-layout: story-form
+layout: story-form.nl
 ---
