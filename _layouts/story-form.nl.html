@@ -16,13 +16,13 @@
 
         <section class="card">
           <header class="card__header">
-            <h1 class="card__title">Take a picture of your drawing to start a story and share your ideas.</h1>
+            <h1 class="card__title">Neem een foto van je tekening voor de door jou gekozen achtergrond om je ideeën te delen.</h1>
           </header>
           <div class="card__content">
             <div class="camera__frame" data-webcam>
               <video id="camera-1" class="camera__view" autoplay playsinline poster="/assets/img/no_camera.png"></video>
               <div class="camera__actions">
-                <button class="button button--primary" data-step-trigger="step-2" data-take-picture='{"sourceId": "camera-1", "destinationId": "camera-picture"}'>Take Picture</button>
+                <button class="button button--primary" data-step-trigger="step-2" data-take-picture='{"sourceId": "camera-1", "destinationId": "camera-picture"}'>Neem Foto</button>
               </div>
             </div>
           </div>
@@ -37,71 +37,72 @@
               <img id="camera-picture" src="/assets/img/no_camera.png" alt="your picture" />
             </div>
             <div class="form__field">
-              <textarea class="form-control" id="user-story" rows="5" placeholder="Provide some context to your story..."></textarea>
+              <textarea class="form-control" id="user-story" rows="5" placeholder="Geef wat meer uitleg bij je tekening..."></textarea>
             </div>
           </div>
           <footer class="card__footer">
-            <button class="button" data-step-trigger="step-1">Retake a picture</button>
-            <button class="button button--primary"  data-step-trigger="step-3">Send your story</button>
+            <button class="button" data-step-trigger="step-1">Neem je foto opnieuw</button>
+            <button class="button button--primary"  data-step-trigger="step-3">Verstuur je visie</button>
           </footer>
         </section>
 
         <section class="card">
           <header class="card__header">
-            <h1 class="card__title">Help us with our research and share some information about yourself.</h1>
+            <h1 class="card__title">Help ons je beter te leren kennen.</h1>
           </header>
           <div class="card__content">
-            <p>All of your information is optional. The more information you provide, the more it helps us in our research.</p>
+            <p>Deze vragen zijn niet verplicht.
+Hoe meer informatie je met ons deelt, hoe meer dit ons onderzoek helpt.</p>
             <div class="form__field">
-              <label for="user-relationship" class="form__label">What is your relationship to this area?</label>
+              <label for="user-relationship" class="form__label">Wat is je relatie met deze buurt?</label>
               <select id="user-relationship" class="form__select" aria-label="Default select example">
-                <option selected>prefer not to answer</option>
-                <option value="live">I live here</option>
-                <option value="work">I work here</option>
-                <option value="visit">I am visiting</option>
-                <option value="other">other</option>
+                <option selected>Dit zeg ik liever niet </option>
+                <option value="live">Ik woon hier</option>
+                <option value="work">Ik werk hier</option>
+                <option value="visit">Ik ben hier op bezoek</option>
+                <option value="other">Ander</option>
               </select>
             </div>
             <div class="form__field">
-              <label for="user-name" class="form-label">Your name</label>
-              <input type="text" id="user-name" class="form-control" placeholder="Firstname Surename">
+              <label for="user-name" class="form-label">Je naam</label>
+              <input type="text" id="user-name" class="form-control" placeholder="Voornaam Achternaam">
             </div>
             <div class="form__field">
-              <label for="user-age" class="form-label">Your Age</label>
+              <label for="user-age" class="form-label">Je leeftijd</label>
               <input type="number" id="user-age" class="form-control" min="1" max="199" placeholder="26">
             </div>
             <div class="form__field">
-              <label for="user-gender" class="form-label">Your gender</label>
+              <label for="user-gender" class="form-label">Je geslacht</label>
               <select id="user-gender" class="form-select" aria-label="Default select example">
-                <option selected>prefer not to answer</option>
-                <option value="female">female</option>
-                <option value="male">male</option>
-                <option value="diverse">diverse</option>
+                <option selected>Dit zeg ik liever niet </option>
+                <option value="female">Vrouw</option>
+                <option value="male">Man</option>
+                <option value="diverse">Ander</option>
               </select>
             </div>
             <div class="form__field">
-              <label for="user-email" class="form-label">Your email</label>
-              <input type="email" id="user-email" class="form-control" placeholder="name@website.com">
+              <label for="user-email" class="form-label">Je contact informatie (email of telefoonnummer)</label>
+              <input type="email" id="user-email" class="form-control" placeholder="name@website.com of +34 12345678">
             </div>
             <div class="form__field">
-              <label for="user-coordinates" class="form-label">Your current position</label>
-              <input type="text" id="user-coordinates" class="form-control" placeholder="click here to share" readonly data-current-position>
+              <label for="user-coordinates" class="form-label">Je huidige locatie</label>
+              <input type="text" id="user-coordinates" class="form-control" placeholder="klik hier om te delen" readonly data-current-position>
             </div>
           </div>
           <footer class="card__footer">
-            <button id="submit-report" class="button button--primary" data-step-trigger="step-4">Submit</button>
+            <button id="submit-report" class="button button--primary" data-step-trigger="step-4">Indienen</button>
           </footer>
         </section>
 
         <section class="card">
           <header class="card__header">
-            <h1 class="card__title">Thanks for participating.</h1>
+            <h1 class="card__title">Bedankt om deel te nemen</h1>
           </header>
           <div class="card__content">
-            <p>Your story will be published tomorrow on our <a href="https://padlet.com/hannevrebos/Vaartkom" target="_blank">living map</a>. Feel free to visit the map to discover more interesting stories.</p>
+            <p>Jouw bijdrage zal vanaf morgen te vinden zijn op de <a href="https://padlet.com/hannevrebos/zof0d2ho8ihqivtt " target="_blank">levende kaart</a>. Je kan deze opnieuw bezoeken om andere ideeën te ontdekken. Deze ideeën zullen verder besproken worden tijdens een speciaal georganiseerde Cafe Sapristi. Je kan de StoryMapper nu doorgeven aan iemand anders.</p>
           </div>
           <footer class="card__footer">
-            <a class="button button" href="index.html">Back to Home</a>
+            <a class="button button" href="index.html">Terug naar start</a>
           </footer>
         </section>
 
