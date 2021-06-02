@@ -13,7 +13,7 @@ The Sint-Laurentius church in Veltem gets reconverted. To reach a collaborative 
 
 In this project we invite residents to share their dreams about the church visually by drawing it on a frame to open a dialogue about the future of this place and community. 
 
-For inspiration, feel free to visit our living map to see and interact with previously generated visions.
+For inspiration, feel free to visit our <a href="https://padlet.com/hannevrebos/zof0d2ho8ihqivtt " target="_blank">living map</a> to see and interact with previously generated visions.
 
 To contribute your own story, please follow the instructions on the StoryMapper and the steps below to share it with your neighbourhood.
 
