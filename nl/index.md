@@ -12,7 +12,7 @@ De Sint-Laurentiuskerk in Veltem krijgt een nieuwe bestemming. Om tot een gezame
 
 In dit onderzoeksproject nodigen we bewoners uit om hun dromen over de kerk visueel te delen door ze te tekenen op het kader om samen een dialoog te starten over de toekomst van deze plek en de gemeenschap.
 
-Voor inspiratie kan je onze levende map met visies bezoeken en kan je reeds de dialoog aangaan met eerder gecreëerde ideeën.
+Voor inspiratie kan je onze <a href="https://padlet.com/hannevrebos/zof0d2ho8ihqivtt " target="_blank">levende map</a> met visies bezoeken en kan je reeds de dialoog aangaan met eerder gecreëerde ideeën.
 
 Om je eigen verhaal toe te voegen, volg je de instructies op de StoryMapper (=het doorzichtig frame dat je in handen hebt) en volg je vervolgens de stappen hieronder om het te delen met je buurt.
 
