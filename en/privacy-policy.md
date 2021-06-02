@@ -2,6 +2,7 @@
 title: Privacy Policy - StoryMapper
 description: Privacy Policy for KU Leuven, how you hereby consent to our Privacy Policy and we use this informations.
 layout: default
+lang: en
 ---
 # Privacy Policy for KU Leuven
 
