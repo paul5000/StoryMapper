@@ -7,7 +7,7 @@ layout: onboarding
 
 thanks for helping us to re-imagine the Sint-Laurentius church and participating in our interactive research project on visual storytelling. 
 
-The Sint-Laurentius church in Veltem gets reconverted. To reach a collaborative and supported function, the municipality launches the participatory trajectory ‘Dorp aan zet’ #buurthuisopkruissnelheid, where they invite residents, enthusiasts and interest groups to think along about the socio-cultural function of the St-Laurentius church. This interactive research project serves as a supplement to the participatory trajectory of the see-through churches.
+The Sint-Laurentius church in Veltem gets reconverted. To reach a collaborative and supported function, the municipality launches the participatory trajectory ‘Dorp aan zet’ #buurthuisopkruissnelheid, where they invite residents, enthusiasts and interest groups to think along about the function of the St-Laurentius church. This interactive research project serves as a supplement to the participatory trajectory of the see-through churches.
 
 <p><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/7FNdytV-SX4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
 
