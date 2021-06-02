@@ -18,4 +18,4 @@ services:
       - 3000:4000
       - 3010:35729
     volumes:
-      - "./:/srv/jekyll"
+      - "./jekyll/:/srv/jekyll"
