@@ -344,3 +344,19 @@ button, .button {
     }
   }
 }
+
+.language__menu {
+    /* border:  1px solid green; */
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.language__link {
+    /* border: 1px solid yellow; */
+}
+
+.language__menu > * {
+    /* border: 1px solid red; */
+    list-style: none;
+    padding: 0.5em;
+}
