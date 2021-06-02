@@ -220,7 +220,7 @@ button, .button {
   &__footer {
     margin-top: auto;
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
     padding: 0.5rem 1rem;
@@ -245,6 +245,16 @@ button, .button {
         position: absolute;
         left: -0.15em;
         content: '\2022';
+      }
+    }
+
+    .logo-list {
+      display: flex;
+      flex-flow: row nowrap;
+
+      & > * { 
+        height: 2em;
+        width: auto;
       }
     }
   }
