@@ -8,7 +8,7 @@ layout: onboarding
 Leuk dat je meedenkt over de toekomst van de Sint-Laurentius kerk en deelneemt aan ons interactief onderzoeksproject.
 De Sint-Laurentiuskerk in Veltem krijgt een nieuwe bestemming. Om tot een gezamenlijk en gedragen invulling te komen lanceert de gemeente het participatietraject ‘Dorp aan Zet’ #buurthuisopkruissnelheid, waarbij ze inwoners, sympathisanten en belangengroepen uitnodigen om mee na te denken over de invulling van de Sint-Laurentiuskerk. Dit interactief onderzoeksproject dient als een aanvulling op het participatief traject met de doorkijkkerkjes.
 
-<p><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/7FNdytV-SX4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+<p style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; width: 100%; height: auto; margin-bottom: 2em;"><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/7FNdytV-SX4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
 
 In dit onderzoeksproject nodigen we bewoners uit om hun dromen over de kerk visueel te delen door ze te tekenen op het kader om samen een dialoog te starten over de toekomst van deze plek en de gemeenschap.
 
