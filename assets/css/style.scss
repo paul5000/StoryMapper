@@ -211,7 +211,7 @@ button, .button {
   &__content {
     max-width: 42em;
     padding: 1rem;
-    margin: 0 auto;
+    margin: 0 auto 3em;
   }
 
   &__footer {
@@ -310,7 +310,8 @@ button, .button {
 
   .site__content {
     text-align: center;
-    font-size: 1.1em;
+    font-size: 1.2em;
+    line-height: 1.5;
   }
 }
 
