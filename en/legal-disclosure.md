@@ -2,6 +2,7 @@
 title: Legal Disclosure - StoryMapper
 description: Information in accordance with Section 5 TMG and Disclaimer.
 layout: default
+lang: en
 ---
 # Legal Disclosure
 
