@@ -6,15 +6,19 @@ lang: nl
 ---
 # Hallo verteller,
 
-Leuk dat je meedenkt over de toekomst van de Sint-Laurentius kerk en deelneemt aan ons interactief onderzoeksproject.
-De Sint-Laurentiuskerk in Veltem krijgt een nieuwe bestemming. Om tot een gezamenlijk en gedragen invulling te komen lanceert de gemeente het participatietraject ‘Dorp aan Zet’ #buurthuisopkruissnelheid, waarbij ze inwoners, sympathisanten en belangengroepen uitnodigen om mee na te denken over de invulling van de Sint-Laurentiuskerk. Dit interactief onderzoeksproject dient als een aanvulling op het participatief traject met de doorkijkkerkjes.
+Verhalen kunnen een plek een identiteit en een gevoel van verbondenheid geven. Elke plek draagt een veelheid aan verhalen mee. Kan jij ons helpen verhalen te verzamelen over Veltem-Beisem? 
+ 
+We zijn op zoek naar visuele verhalen over Veltem-Beisem in de vorm van een simpele tekening of Lego scene via de StoryMapper. Dit kan gaan van een grappige recente gebeurtenis, een herinnering van je schooltijd, een verhaal dat je je grootmoeder vertelde over het dorpsbal, de boom die je doet terugdenken aan je eerste lief of een andere plekt in met een unieke betekenis.  
+ 
+De verhalen komen samen op een digitale kaart die je <a href="https://padlet.com/hannevrebos/f2579e9x3zu6njfr" target="_blank">hier</a> kan terugvinden. Midden november zal de KerkRaad een prijs uitreiken voor een Veltems verhaal. Wil je ook kans maken op de prijs? Deel dan hieronder je verhaal en geef het kader vandaag nog door aan een andere bezoeker van dit buurtfeest om samen zoveel mogelijk verhalen te verzamelen. Loopt het feest ten einde -zou je ons dan kunnen helpen om de Storymapper terug te brengen naar Bar Deco? 
+ 
+Dit project is een verderzetting van het Storymapper onderzoeksproject dat ook werd gebruikt in het participatie proces rond de Sint Laurentius kerk. 
+ 
+ 
+ 
+In dit onderzoeksproject nodigen we bewoners uit om hun verhalen over Veltem-Beisem visueel te delen via de StoryMapper om samen een dialoog te starten deze plek en gemeenschap. Gebruik de bijgevoegde stiften of de Lego blokjes om je verhaal vorm te geven. 
+ 
+ 
+Voor inspiratie kan je onze <a href="https://padlet.com/hannevrebos/f2579e9x3zu6njfr" target="_blank">levende map</a> met visies bezoeken en kan je reeds de dialoog aangaan met eerder gecreëerde verhalen. 
 
-<p style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; width: 100%; height: auto; margin-bottom: 2em;"><iframe style="border:none; overflow:hidden; position: absolute; top: 0; left: 0; width: 100%; height: 100%;" width="560" height="315" src="https://www.youtube-nocookie.com/embed/7FNdytV-SX4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
-
-In dit onderzoeksproject nodigen we bewoners uit om hun dromen over de kerk visueel te delen door ze te tekenen op het kader om samen een dialoog te starten over de toekomst van deze plek en de gemeenschap.
-
-Voor inspiratie kan je onze <a href="https://padlet.com/hannevrebos/zof0d2ho8ihqivtt " target="_blank">levende map</a> met visies bezoeken en kan je reeds de dialoog aangaan met eerder gecreëerde ideeën.
-
-Om je eigen verhaal toe te voegen, volg je de instructies op de StoryMapper (=het doorzichtig frame dat je in handen hebt) en volg je vervolgens de stappen hieronder om het te delen met je buurt.
-
-[Creer je visie hier](your-story.html){: .button .button--primary}
+[CREER JE VERHAAL HIER ](your-story.html){: .button .button--primary}
