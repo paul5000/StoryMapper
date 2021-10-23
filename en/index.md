@@ -6,17 +6,15 @@ lang: en
 ---
 # Hello Storyteller,
 
-Thanks for helping us to re-imagine the Sint-Laurentius church and participating in our interactive research project on visual storytelling. 
+Stories can give a place an identity and a sense of belonging. Each place holds a multiplicity of stories. Can you help us to collaboratively tell the story of Veltem-Beisem? 
+ 
+We are looking for a visual narrative of a specific location in form of a simple drawing or a Lego scene on the StoryMapper. This can be a funny memory about your time as a schoolkid, the tree that still reminds you of your first kiss, or another spot that holds special meaning to you.  
+The stories will go to an online mapping platform, which you can find <a href="https://padlet.com/hannevrebos/f2579e9x3zu6njfr" target="_blank">living map</a> . Mid November, the church board (KerkRaad) will select a story to win a prize. Do you also want to make a chance for the prize? Then share your story and pass on the Storymapper to another visitor at the neighborhood festival. If the activities are coming to an end, please drop the StoryMapper off at Bar Deco. 
+ 
+This initiative is part the StoryMapper research project for that was already part of the participatory trajectory around the St Laurentius church.  
+ 
+In this research project we invite residents to share their stories about Veltem-Beisem visually with the Storymapper. The purpose is to open a dialogue about the place and its community. Use the markers or Lego pieces to visualize your story. 
+ 
+For inspiration, feel free to visit our <a href="https://padlet.com/hannevrebos/f2579e9x3zu6njfr" target="_blank">living map</a> to see and interact with previously generated stories. 
 
-The Sint-Laurentius church in Veltem gets reconverted. To reach a collaborative and supported function, the municipality launches the participatory trajectory ‘Dorp aan zet’ #buurthuisopkruissnelheid, where they invite residents, enthusiasts and interest groups to think along about the function of the St-Laurentius church. This interactive research project serves as a supplement to the participatory trajectory of the see-through churches.
-
-<p style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; width: 100%; height: auto; margin-bottom: 2em;"><iframe style="border:none; overflow:hidden; position: absolute; top: 0; left: 0; width: 100%; height: 100%;" width="560" height="315" src="https://www.youtube-nocookie.com/embed/7FNdytV-SX4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
-
-In this project we invite residents to share their dreams about the church visually by drawing it on a frame to open a dialogue about the future of this place and community. 
-
-For inspiration, feel free to visit our <a href="https://padlet.com/hannevrebos/zof0d2ho8ihqivtt " target="_blank">living map</a> to see and interact with previously generated visions.
-
-To contribute your own story, please follow the instructions on the StoryMapper and the steps below to share it with your neighbourhood.
-
-
-[Start your vision](your-story.html){: .button .button--primary}
+[Create your Story](your-story.html){: .button .button--primary}
