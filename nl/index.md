@@ -14,11 +14,6 @@ De verhalen komen samen op een digitale kaart die je <a href="https://padlet.com
  
 Dit project is een verderzetting van het Storymapper onderzoeksproject dat ook werd gebruikt in het participatie proces rond de Sint Laurentius kerk. 
  
- 
- 
-In dit onderzoeksproject nodigen we bewoners uit om hun verhalen over Veltem-Beisem visueel te delen via de StoryMapper om samen een dialoog te starten deze plek en gemeenschap. Gebruik de bijgevoegde stiften of de Lego blokjes om je verhaal vorm te geven. 
- 
- 
-Voor inspiratie kan je onze <a href="https://padlet.com/hannevrebos/f2579e9x3zu6njfr" target="_blank">levende map</a> met visies bezoeken en kan je reeds de dialoog aangaan met eerder gecreëerde verhalen. 
+Voor inspiratie kan je onze <a href="https://padlet.com/hannevrebos/f2579e9x3zu6njfr" target="_blank">levende map</a> met verhalen bezoeken en kan je reeds de dialoog aangaan met eerder gecreëerde verhalen. 
 
 [CREER JE VERHAAL HIER ](your-story.html){: .button .button--primary}
