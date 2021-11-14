@@ -97,14 +97,14 @@
   window.addEventListener("DOMContentLoaded", () => {
       // Initialize Firebase
       firebase.initializeApp({
-        "apiKey": ${{ secrets.FB_API_KEY }},
-        "authDomain": ${{ secrets.FB_AUTH_DOMAIN }},
-        "databaseURL": ${{ secrets.FB_DATABASEURL }},
-        "projectId": ${{ secrets.FB_PROJECT_ID }},
-        "storageBucket": ${{ secrets.FB_STORAGE_BUCKET }},
-        "messagingSenderId": ${{ secrets.FB_MESSAGING_SENDER_ID }},
-        "appId": ${{ secrets.FB_APP_ID }},
-        "measurementId": ${{ secrets.FB_MESUREMENT_ID }}
+        "apiKey": "AIzaSyBxlBVs8pTzztz9bIEdfEwa2xuguSvDPXA",
+        "authDomain": "storycatcher-c2021.firebaseapp.com",
+        "databaseURL": "https://storycatcher-c2021.firebaseio.com",
+        "projectId": "storycatcher-c2021",
+        "storageBucket": "storycatcher-c2021.appspot.com",
+        "messagingSenderId": "139292647133",
+        "appId": "1:139292647133:web:033d6d3b986466e163c534",
+        "measurementId": "G-P0LNTLR72F"
     })
     initWebcams()
     initCameraTriggers()
