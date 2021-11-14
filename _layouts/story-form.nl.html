@@ -19,13 +19,16 @@
             <h1 class="card__title">Neem een foto van je visueel verhaal voor de door jou gekozen achtergrond om je ideeën te delen.</h1>
           </header>
           <div class="card__content">
-            <div class="camera__frame" data-webcam>
+            <!-- div class="camera__frame" data-webcam>
               <video id="camera-1" class="camera__view" autoplay playsinline poster="/assets/img/no_camera.png"></video>
               <div class="camera__actions">
                 <button class="button button--primary" data-step-trigger="step-2" data-take-picture='{"sourceId": "camera-1", "destinationId": "camera-picture"}'>Neem Foto</button>
               </div>
-            </div>
+            </div -->
           </div>
+          <footer class="card__footer">
+            <button class="button button--primary" data-step-trigger="step-2">Next</button>
+          </footer>
         </section>
 
         <section class="card">
@@ -33,9 +36,6 @@
             <h1 class="card__title">Geef hier meer details over je verhaal om deze beter te begrijpen.</h1>
           </header>
           <div class="card__content">
-            <div class="camera__frame">
-              <img id="camera-picture" src="/assets/img/no_camera.png" alt="your picture" />
-            </div>
             <div class="form__field">
               <textarea class="form-control" id="user-story" rows="5" placeholder="Geef wat meer uitleg bij je tekening..."></textarea>
             </div>
